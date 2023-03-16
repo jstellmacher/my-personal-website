@@ -1,116 +1,99 @@
 *{
-    margin: 0px;
-    padding: 0px;
-    /*box-sizing: border-box;*/
-    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
-html{
-    background-image: linear-gradient(90deg, #001f3f 10%, #090979 35%, #00d4ff 90%);
+
+body{
+    /*background: rgba(249, 98, 125, 10%);*/
+    background: white;
 }
+/*THANK YOU FOR THE TUTORIAL CODINGLAB https://youtu.be/ps575maf37Y*/
 nav{
+    width: 100%;
+    padding: 12px 0;
+    background: #ecf0f3;
+    box-shadow: -3px -3px 7px #ffffff,
+                3px 3px 5px #ceced1;
+}
+
+nav .menu{
+    max-width: 1270px;
+    margin: auto;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 60px;
-    background-color: rgba(255,255,255,0.5);
 }
-nav h1{
-    font-size: 32 px;
-}
-nav ul{
-    display: flex;
-}
-nav ul li{
-    list-style: none;
-    padding: 0px 25px;
-}
-nav ul li a{
+
+.menu .logo a{
+    font-size: 28px;
+    font-weight: 600;
     text-decoration: none;
-    font-size: 20px;
-    color: white;
+    color: #31344b;
 }
-nav ul li::after{
-    display: block;
-    content: "";
-    height: 1px;
-    background-color:aquamarine;
-    transform: scaleX(0);
-    transition: 0.5s ease;
-}
-/*https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scaleX*/
-/*soooooo I did research :) I am making a nice nav bar where when you hover, it creates a little line under the href*/
-nav ul li:hover::after{
-    transform: scaleX(1);
-}
-/*the second scaleX is the duration as I understand this*/
-body{
-    font-family: 'Times New Roman', serif;
 
-}
-#horiBox1{
-    width: 300px;
-    float:left;
-    border: 1px solid red;
-}
-#horiBox2{
-    border: 1px solid green;
-    float: left;
-}
-/*second will not wrap below the first these were so annoying*/
-#main {
-    /*display: inline-flex;*/
-    justify-content: center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background: white;
-    border-radius: 25px;
-    padding: 20px;
-    /* background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc); */
-
-}
-h1 {
-    text-align: left;
-    text-shadow: teal;
-    font-weight: bold;
-    color: white;
-}
-h2{
-    padding: 8px;
-    text-align: center;
-    text-shadow: teal;
-    font-weight: bold;
-    color: white;
-    font-size: 80px;
-}
-p {
-    color: black;
-    padding: 8px;
-    margin: 0 5px 24px;
-    font-family: 'Times New Roman', serif;
-}
-#buttonFormat{
-    margin: 0 auto;
+.menu ul{
+    list-style: none;
     display: flex;
-    align-items:center;
-    justify-content: center;
+
 }
-#tldr{
-    background: linear-gradient(-90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-    border: none;
-    color: white;
-    padding: 15px 30px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.9) 0px 10px 15px;
+
+.menu ul a{
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+    display: inline-flex;
+    padding: 10px 12px;
+    box-shadow: -3px -3px 7px #ffffff,
+                3px 3px 5px #ceced1;
+    position: relative;
+    transition: all 0.4s ease;
 }
-/*building hover on button*/
-#tldr:hover{
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+
+.menu ul a:hover:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset -3px -3px 7px #ffffff,
+                inset 3px 3px 5px #ceced1;
+
 }
-#tldr:active{
-    background-color: aquamarine;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+
+.menu ul a:hover{
+    color: #00635D;
+
 }
+
+@media (max-width:940px){
+    .menu ul{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 400px;
+        padding-top: 45px;
+        height: 100%;
+        background: white;
+        box-shadow: 0 5px 10px #b0b0b5;
+        z-index: 12;
+
+    }
+    .menu ul a{
+        display: block;
+        /*makes a long horizontal block*/
+        font-size: 23px;
+        width: 100%;
+        margin-top: 30px;
+        box-shadow: none;
+        text-align: center;
+    }
+}
+/*trying to learn responsive design as I learn the rest so that I can stay current and future proof. yay mobile ...*/
