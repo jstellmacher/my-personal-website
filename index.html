@@ -6,19 +6,41 @@
         <!--JUST LEARNED THAT charset is an encoder| viewport gives the browser instructions on how to control the page's dimensions and scaling -->
         <link rel="stylesheet" href="./style.css" />
         <script src="script.js"></script>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <!--DID a lot or research build an icon kit?  or draw from a CDN? this one is from feather for the burger menu etc-->
         <title>Jai's Portfolio</title>
     </head>
+    
+    
+    
+    
     <!--HTML SPACER SO I CAN GET MY BEARINGS-->
+
+
+
+
+
     <body>
         <nav>
             <div class="menu">
+                <input type="checkbox" id="check">
+                <!--I learned that the input tag specifies an input field where the user can enter data-->
                 <div class="logo"><a href="./index.html">Stellar Stellmacher</a></div>
                 <ul class="nav-links">
+                    <label class="button cancel" for="check"><i data-feather="x"></i></label>
+                    <!--I forgot to mention that the i "tag is often used to indicate a technical term, a phrase from another language, a thought, a ship name, etc." w3schools.com------ughhhhhh my icons aren't showing up-->
+                    
                     <li><a href="">Projects</a></li>
                     <li><a href="">About Me</a></li>
                     <li><a href="">Contact</a></li>
                 </ul>
+                <label class="button burger" for="check"><i data-feather="menu"></i></label>
+                    <!--I learned that the label tag defines elements that are inputs ie.) if there is an empty email form it allows tells the user to type in their email--><!--this one creates a hamburger menu when the device is small--> <!--i also is a place to add icons-->
             </div>
         </nav>
     </body>
+    <script>
+        feather.replace()
+    </script>
 </html>

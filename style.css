@@ -71,12 +71,30 @@ nav .menu{
 
 }
 
+nav label.button{
+    color: #31344b;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+}
+
+nav label.cancel{
+    position: absolute;
+    top: 25px;
+    right: 30px;
+
+}
+
+#check{
+    /*display: none;*/
+}
+
 @media (max-width:940px){
     .menu ul{
         display: block;
         position: fixed;
         top: 0;
-        left: 0;
+        left: 0; /*make this 100% after you find the hamburger icon - Import it*/
         width: 100%;
         max-width: 400px;
         padding-top: 45px;
@@ -84,7 +102,7 @@ nav .menu{
         background: white;
         box-shadow: 0 5px 10px #b0b0b5;
         z-index: 12;
-
+        transition: all 0.3s ease;
     }
     .menu ul a{
         display: block;
@@ -95,5 +113,25 @@ nav .menu{
         box-shadow: none;
         text-align: center;
     }
+}
+
+.menu ul a:hover{
+    box-shadow: none;
+}
+
+nav label.burger{
+    display: 
+}
+
+#check:checked ~ label.burger{
+    display: none;
+}
+#check:checked ~ ul label.cancel{
+    display: block;
+
+}
+
+#check:checked ~ ul{
+    left: 0;
 }
 /*trying to learn responsive design as I learn the rest so that I can stay current and future proof. yay mobile ...*/
