@@ -41,21 +41,21 @@ nav .menu{
 }
 
 .menu ul a{
-    margin: 0 10px;
+    margin: 0 8px;
     text-decoration: none;
     font-size: 18px;
     color: black;
-    font-weight: 500;
+    font-weight: 400;
     display: inline-flex;
     padding: 10px 12px;
     box-shadow: -3px -3px 7px #ffffff,
                 3px 3px 5px #ceced1;
     position: relative;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 .menu ul a:hover:before{
-    content: '';
+    content:'';
     position: absolute;
     top: 0;
     left: 0;
@@ -89,6 +89,27 @@ nav label.cancel{
     /*display: none;*/
 }
 
+.menu ul a:hover{
+    box-shadow: none;
+}
+
+nav label.burger{
+    display: 
+}
+
+#check:checked ~ label.burger{
+    display: none;
+}
+#check:checked ~ ul label.cancel{
+    display: block;
+
+}
+
+#check:checked ~ ul{
+    left: 0;
+}
+/*trying to learn responsive design as I learn the rest so that I can stay current and future proof. yay mobile ...*/
+
 @media (max-width:940px){
     .menu ul{
         display: block;
@@ -115,23 +136,4 @@ nav label.cancel{
     }
 }
 
-.menu ul a:hover{
-    box-shadow: none;
-}
-
-nav label.burger{
-    display: 
-}
-
-#check:checked ~ label.burger{
-    display: none;
-}
-#check:checked ~ ul label.cancel{
-    display: block;
-
-}
-
-#check:checked ~ ul{
-    left: 0;
-}
-/*trying to learn responsive design as I learn the rest so that I can stay current and future proof. yay mobile ...*/
+/*ABOVE IS THE NAVBAR ONLY ---- below will be the content*/
