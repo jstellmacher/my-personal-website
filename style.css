@@ -27,6 +27,13 @@ nav .menu{
     align-items: center;
 }
 
+.logo img{
+    width: 15%;
+    aspect-ratio: 3/2;
+    object-fit:contain;
+    mix-blend-mode: color-burn;
+}
+
 .menu .logo a{
     font-size: 28px;
     font-weight: 600;
@@ -68,7 +75,7 @@ nav .menu{
 
 .menu ul a:hover{
     color: #00635D;
-
+    box-shadow: none;
 }
 
 nav label.button{
@@ -82,21 +89,48 @@ nav label.cancel{
     position: absolute;
     top: 25px;
     right: 30px;
-
+    /*display:flex;*/
 }
 
 #check{
-    /*display: none;*/
+    display: none;
 }
 
-.menu ul a:hover{
-    box-shadow: none;
-}
 
+/*@media is a rule for */
+@media (max-width:940px){
+    .menu ul{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 100%; /*make this 100% after you find the hamburger icon - Import it*/
+        width: 100%;
+        max-width: 400px;
+        padding-top: 45px;
+        height: 100%;
+        background: #ecf0f3;
+        box-shadow: 0 5px 10px #b0b0b5;
+        z-index: 12;
+        /*z index is */
+        transition: all 0.3s ease;
+}
+    .menu ul a{
+        display: block;
+        /*makes a long horizontal block*/
+        font-size: 23px;
+        width: 100%;
+        margin-top: 30px;
+        box-shadow: none;
+        text-align: center;
+        max-width: 90%;
+        
+}
+.menu ul a:hover:before{
+    box-shadow: none;    
+}
 nav label.burger{
-    display: 
+    display: block;
 }
-
 #check:checked ~ label.burger{
     display: none;
 }
@@ -110,30 +144,6 @@ nav label.burger{
 }
 /*trying to learn responsive design as I learn the rest so that I can stay current and future proof. yay mobile ...*/
 
-@media (max-width:940px){
-    .menu ul{
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0; /*make this 100% after you find the hamburger icon - Import it*/
-        width: 100%;
-        max-width: 400px;
-        padding-top: 45px;
-        height: 100%;
-        background: white;
-        box-shadow: 0 5px 10px #b0b0b5;
-        z-index: 12;
-        transition: all 0.3s ease;
-    }
-    .menu ul a{
-        display: block;
-        /*makes a long horizontal block*/
-        font-size: 23px;
-        width: 100%;
-        margin-top: 30px;
-        box-shadow: none;
-        text-align: center;
-    }
 }
 
 /*ABOVE IS THE NAVBAR ONLY ---- below will be the content*/
