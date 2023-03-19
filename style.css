@@ -43,10 +43,10 @@ nav .menu{
     width: 10%;
     aspect-ratio: square;
     object-fit:contain;
-    /*mix-blend-mode: color-burn;*/
+    mix-blend-mode:darken;
     border-radius: 25%;
     box-shadow: -3px -3px 7px #ffffff,
-    3px 3px 5px #ceced1;
+                3px 3px 5px #878787;
     
 }
 .menu .logo img:hover:before{
@@ -61,7 +61,8 @@ nav .menu{
     border-radius: 25px;
 }
 .menu .logo img:hover{
-    box-shadow: none;
+    box-shadow: -3px -3px 7px #ffa5a5,
+                3px 3px 5px #ababff;;
     color: none;
 }
 
@@ -207,7 +208,7 @@ nav label.burger{
 
 main{
     min-height: 100vh;
-    background: #d1d9e6;
+    background: #5d6b83;
     /*background: linear-gradient(to right top, #bdd2d6, #ecf0f3);*/
     display: flex;
     align-items: center;
@@ -429,7 +430,19 @@ h3{
                 inset -5px -5px 5px rgba(255, 255, 255, 1);
 }
 
+
+.about-me{
+    height:100vh;
+    background-color: #c3fffb;
+}
 footer{
-    height: 500px;
+    height: 300px;
     background-color: black;
+    z-index: 1;
+}
+#contact ul{
+    font-size: 40px;
+    z-index: 1;
+    margin: 5px;
+    padding: 5px;
 }
