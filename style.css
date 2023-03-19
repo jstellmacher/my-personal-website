@@ -226,8 +226,8 @@ main{
     border-radius: 25px;
     z-index: 2;
     backdrop-filter: blur(1rem);
-    box-shadow: 5px 5px 10px rgba(163,177,198,0.5), 
-                -5px -5px 10px rgba(255, 255, 255, 0.6);
+    box-shadow: 5px 5px 5px rgba(163,177,198,0.9), 
+                -5px -5px 5px rgba(255, 255, 255, 1);
     
 }
 /*h1{
@@ -344,11 +344,11 @@ h2{
       
 }
 .container button{
-    height: 12rem;
+    height: 8rem;
     max-height: 50%;
     padding: 15px;
     margin: 15px;
-    width: 40%;
+    width: 20%;
     
     font-size: 1.5rem;
     background: #ebeef1;
@@ -398,10 +398,38 @@ hr{
     margin: 8px;
 }
 #hr-line{
-    border-radius: 50px;
-    border-radius: 50px;
-    background: #D1D8EC;
-    box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
-    box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
+    margin-top: 2rem;
+    display: inline-block;
+    height: 25px;
+    width: 84%;
+    border-radius: 5px;
+    background: #d6d6d6;
+    box-shadow: 5px 5px 5px rgba(163, 177, 198, 1), 
+                -5px -5px 5px rgb(255, 255, 255);
+}
+h3{
+    margin-top: 2rem;
+    font-weight: lighter;
+   
 }
 
+.projects{
+    display: inline-block;
+    margin-top: 2rem;
+    min-height: 30vh;
+    width: 85%;
+    background: linear-gradient(to right bottom,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.1)
+    );
+    border-radius: 25px;
+    z-index: 2;
+    backdrop-filter: blur(1rem);
+    box-shadow: inset 5px 5px 5px rgba(163,177,198,0.9), 
+                inset -5px -5px 5px rgba(255, 255, 255, 1);
+}
+
+footer{
+    height: 500px;
+    background-color: black;
+}
