@@ -116,6 +116,7 @@ nav .menu{
     position: relative;
     transition: all 0.3s ease;
     border-radius: 25px;
+    white-space: nowrap;
 }
 
 .menu ul a:hover:before{
@@ -213,19 +214,21 @@ main{
     justify-content: center;
 }
 .glass{
-    background: white;
+    /*background: white;*/
     min-height: 80vh;
     width: 60%;
     background: linear-gradient(to right bottom,
     rgba(255, 255, 255, 0.9),
     rgba(255, 255, 255, 0.1)
     );
-    box-shadow: inset -3px -3px 10px rgba(255, 255, 255, 0.9),
-                inset 3px 3px 8px #ceced1;
+    /*box-shadow:-10x -10px 20px rgba(255, 255, 255, 0.9),
+               10px 10px 20px #ceced1;*/
     border-radius: 25px;
     z-index: 2;
-    backdrop-filter: blur(2rem);
-
+    backdrop-filter: blur(1rem);
+    box-shadow: 5px 5px 10px rgba(163,177,198,0.5), 
+                -5px -5px 10px rgba(255, 255, 255, 0.6);
+    
 }
 /*h1{
     margin-top: 40rem;
@@ -333,27 +336,30 @@ h2{
     font-weight: lighter;
 }
 .container{
-    height:auto;
+    
     width: 100%;
     background: none;
     text-align: center;
 
       
 }
-.container > button{
+.container button{
+    height: 12rem;
+    max-height: 50%;
     padding: 15px;
     margin: 15px;
     width: 40%;
+    
     font-size: 1.5rem;
     background: #ebeef1;
-    cursor: pointer;
     border: none;
     border-radius: 25px;
     color: #03b5aa;
     box-shadow: -3px -3px 7px #ffffff,
                 3px 3px 5px #ceced1;
+    cursor: pointer;
 }
-.container > button:hover::before{
+.container #button:hover:before{
     content:'';
     position: absolute;
     top: 0;
@@ -363,15 +369,16 @@ h2{
     box-shadow: inset -3px -3px 7px #ffffff,
                 inset 3px 3px 5px #ceced1;
     border-radius: 25px;
+    transition: all 0.3s ease;
 
 }
 .container button:hover{
     color: #00635D;
-    box-shadow: none;
+    box-shadow: inset -10px -10px 20px #ffffff,
+                inset 10px 10px 20px #ceced1;;
 }
 .container button:hover::after{
     content:'';
-    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -379,4 +386,22 @@ h2{
     box-shadow: inset -3px -3px 7px #ffffff,
                 inset 3px 3px 5px #ceced1;
     border-radius: 25px;
+    cursor: pointer;
 }
+hr{
+    border: 15px solid #282a2d;
+    border-radius: 25px;
+    box-shadow:  -10px -10px 20px #ffffff,
+                10px 10px 20px #ceced1;
+    width: 80%;
+    display: inline-flex;
+    margin: 8px;
+}
+#hr-line{
+    border-radius: 50px;
+    border-radius: 50px;
+    background: #D1D8EC;
+    box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
+    box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
+}
+
