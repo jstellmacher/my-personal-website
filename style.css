@@ -4,11 +4,15 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+/*html{
+    background-color: #0c1618;
+}*/
+/*body{
+    /*background: rgba(249, 98, 125, 10%);
+    background: none;
+}*/
 
-body{
-    /*background: rgba(249, 98, 125, 10%);*/
-    background: white;
-}
+
 /*THANK YOU FOR THE TUTORIAL CODINGLAB https://youtu.be/ps575maf37Y*/
 nav{
     width: 100%;
@@ -27,24 +31,74 @@ nav .menu{
     align-items: center;
 }
 
-.logo img{
-    width: 15%;
-    aspect-ratio: 3/2;
+.menu .logo{
+    display: flex;
+    align-items: center;
+    
+}
+/*this was so damn annoying^*/
+.menu .logo img{
+    width: 10%;
+    aspect-ratio: square;
     object-fit:contain;
-    mix-blend-mode: color-burn;
+    /*mix-blend-mode: color-burn;*/
+    border-radius: 25%;
+    box-shadow: -3px -3px 7px #ffffff,
+    3px 3px 5px #ceced1;
+    
+}
+.menu .logo img:hover:before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset -3px -3px 7px #ffffff,
+                inset 3px 3px 5px #ceced1;
+    border-radius: 25px;
+}
+.menu .logo img:hover{
+    box-shadow: none;
+    color: none;
 }
 
+
 .menu .logo a{
+    padding: 0;
+    margin: 0 8px;
     font-size: 28px;
     font-weight: 600;
+    padding: 10px 12px;
     text-decoration: none;
     color: #31344b;
+    box-shadow: -3px -3px 7px #ffffff,
+    3px 3px 5px #ceced1;
+    position: relative;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+}
+
+.menu .logo a:hover:before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset -3px -3px 7px #ffffff,
+                inset 3px 3px 5px #ceced1;
+    border-radius: 25px;
+}
+.menu .logo a:hover{
+    box-shadow: none;
+    color: #e63946;
 }
 
 .menu ul{
     list-style: none;
     display: flex;
-
+    
 }
 
 .menu ul a{
@@ -59,6 +113,7 @@ nav .menu{
                 3px 3px 5px #ceced1;
     position: relative;
     transition: all 0.3s ease;
+    border-radius: 25px;
 }
 
 .menu ul a:hover:before{
@@ -70,7 +125,7 @@ nav .menu{
     bottom: 0;
     box-shadow: inset -3px -3px 7px #ffffff,
                 inset 3px 3px 5px #ceced1;
-
+    border-radius: 25px;
 }
 
 .menu ul a:hover{
@@ -142,8 +197,71 @@ nav label.burger{
 #check:checked ~ ul{
     left: 0;
 }
+}
 /*trying to learn responsive design as I learn the rest so that I can stay current and future proof. yay mobile ...*/
 
+/*ABOVE IS THE NAVBAR ONLY ---- below will be the content*/
+
+main{
+    min-height: 100vh;
+    background: #d1d9e6;
+    /*background: linear-gradient(to right top, #bdd2d6, #ecf0f3);*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.glass{
+    background: white;
+    min-height: 80vh;
+    width: 60%;
+    background: linear-gradient(to right bottom,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.1)
+    );
+    box-shadow: inset -3px -3px 10px rgba(255, 255, 255, 0.9),
+                inset 3px 3px 8px #ceced1;
+    border-radius: 25px;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+
+}
+h1{
+    text-align: center;
+    margin-top: 10px;
 }
 
-/*ABOVE IS THE NAVBAR ONLY ---- below will be the content*/
+/*.circle1,
+.circle2{
+    background: white;
+    background: linear-gradient(to right bottom,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.1)
+    );
+    height: 10rem;
+    width: 10rem;
+    position: absolute;
+    border-radius: 25%;
+    position: absolute;
+}
+.circle1{
+    top: 30%;
+    right: 15%;
+
+}
+.circle2{
+    bottom: 5%;
+    left: 10%;
+}*/
+
+/*BELOW IS MY STICKY NAVBAR + JAVASCRIPT
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.sticky + .content {
+    padding-top: 60px;
+}
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_navbar_sticky ----I'll try again later----*/
+
+
