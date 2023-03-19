@@ -4,6 +4,8 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
+/*rem unit of measurement = root em”, a unit of measurement that represents the font size of the root element (thank you https://www.sitepoint.com/understanding-and-using-rem-units-in-css/*/
 /*html{
     background-color: #0c1618;
 }*/
@@ -225,10 +227,67 @@ main{
     backdrop-filter: blur(2rem);
 
 }
-h1{
+/*h1{
+    margin-top: 40rem;
     text-align: center;
-    margin-top: 10px;
+    font-size: 50px;
+    color: black;
+    overflow: hidden;
+    border-right: .15em solid black;
+    white-space: nowrap;
+    margin-block:0 auto;
+    letter-spacing: 0.15em;
+    animation: 
+        typing 3.5s steps(50, end),
+        blink-caret 0.5s step-end infinite;
+
+}*/
+/*keyframe area*/
+
+h1{
+    position: relative;
+    top: 50px;  
+    width: 100%;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 50px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
 }
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 2.8s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(58) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 58%;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+  50%{border-color: #31344b;}
+}
+/* The typing effect */
+/*@keyframes typing {
+    from { width: 0 }
+    to { width: 24em }
+  }
+  
+  /* The typewriter cursor effect */
+  /*@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black; }
+  }*/
+/*keyframe is "animation is created by gradually changing from one set of CSS styles to another"(thanks https://www.w3schools.com/cssref/css3_pr_animation-keyframes.php)*/
+
+
+
+
+
 
 /*.circle1,
 .circle2{
@@ -265,3 +324,59 @@ h1{
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_navbar_sticky ----I'll try again later----*/
 
 
+
+/*BODY !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! BELOW*/
+h2{
+    text-align: center;
+    margin-top: 2rem;
+    padding: auto;
+    font-weight: lighter;
+}
+.container{
+    height:auto;
+    width: 100%;
+    background: none;
+    text-align: center;
+
+      
+}
+.container > button{
+    padding: 15px;
+    margin: 15px;
+    width: 40%;
+    font-size: 1.5rem;
+    background: #ebeef1;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    color: #03b5aa;
+    box-shadow: -3px -3px 7px #ffffff,
+                3px 3px 5px #ceced1;
+}
+.container > button:hover::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset -3px -3px 7px #ffffff,
+                inset 3px 3px 5px #ceced1;
+    border-radius: 25px;
+
+}
+.container button:hover{
+    color: #00635D;
+    box-shadow: none;
+}
+.container button:hover::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset -3px -3px 7px #ffffff,
+                inset 3px 3px 5px #ceced1;
+    border-radius: 25px;
+}
