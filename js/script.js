@@ -14,6 +14,7 @@ function tldrButton() {
 //BUILDING A STICK JS NAVBAR!!!!!!!!!!!!!!!
 window.onscroll = function() {myFunction()};
 
+
 var menu = document.getElementsByTagName("menu");
 var sticky = menu.offsetTop;
 
