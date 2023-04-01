@@ -5,7 +5,7 @@
     font-family: sans-serif;
 }
 
-/*rem unit of measurement = root em”, a unit of measurement that represents the font size of the root element (thank you https://www.sitepoint.com/understanding-and-using-rem-units-in-css/*/
+/*?rem unit of measurement = root em”, a unit of measurement that represents the font size of the root element (thank you https://www.sitepoint.com/understanding-and-using-rem-units-in-css/*/
 /*html{
     background-color: #0c1618;
 }*/
@@ -14,7 +14,7 @@
     background: none;
 }*/
 
-
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /*THANK YOU FOR THE TUTORIAL CODINGLAB https://youtu.be/ps575maf37Y*/
 nav{
     width: 100%;
@@ -154,8 +154,7 @@ nav label.cancel{
 #check{
     display: none;
 }
-
-
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /*@media is a rule for */
 @media (max-width:940px){
     .menu ul{
@@ -202,8 +201,8 @@ nav label.burger{
     left: 0;
 }
 }
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /*trying to learn responsive design as I learn the rest so that I can stay current and future proof. yay mobile ...*/
-
 /*ABOVE IS THE NAVBAR ONLY ---- below will be the content*/
 
 main{
@@ -215,42 +214,26 @@ main{
     justify-content: center;
 }
 .glass{
-    /*background: white;*/
+    
     min-height: 80vh;
     width: 60%;
     background: linear-gradient(to right bottom,
     rgba(255, 255, 255, 0.9),
     rgba(255, 255, 255, 0.1)
     );
-    /*box-shadow:-10x -10px 20px rgba(255, 255, 255, 0.9),
-               10px 10px 20px #ceced1;*/
     border-radius: 25px;
-    z-index: 2;
-    backdrop-filter: blur(1rem);
-    box-shadow: 5px 5px 5px rgba(163,177,198,0.9), 
-                -5px -5px 5px rgba(255, 255, 255, 1);
+    z-index: 1;
+    backdrop-filter: blur(1.5rem);
+    box-shadow: -5px -5px 5px rgba(255, 255, 255, .9),
+                5px 5px 5px rgba(253, 254, 255, 0.8);
     
 }
-/*h1{
-    margin-top: 40rem;
-    text-align: center;
-    font-size: 50px;
-    color: black;
-    overflow: hidden;
-    border-right: .15em solid black;
-    white-space: nowrap;
-    margin-block:0 auto;
-    letter-spacing: 0.15em;
-    animation: 
-        typing 3.5s steps(50, end),
-        blink-caret 0.5s step-end infinite;
 
-}*/
 /*keyframe area*/
 
 h1{
     position: relative;
-    top: 50px;  
+    top: 50px;
     width: 100%;
     margin: 0 auto;
     border-right: 2px solid rgba(255,255,255,.75);
@@ -275,66 +258,33 @@ h1{
   to{border-right-color: transparent;}
   50%{border-color: #31344b;}
 }
-/* The typing effect */
-/*@keyframes typing {
-    from { width: 0 }
-    to { width: 24em }
-  }
-  
-  /* The typewriter cursor effect */
-  /*@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: black; }
-  }*/
 /*keyframe is "animation is created by gradually changing from one set of CSS styles to another"(thanks https://www.w3schools.com/cssref/css3_pr_animation-keyframes.php)*/
 
-
-
-
-
-
-
-
-/*BELOW IS MY STICKY NAVBAR + JAVASCRIPT
-.sticky{
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-.sticky + .content {
-    padding-top: 60px;
-}
-https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_navbar_sticky ----I'll try again later----*/
-
-
-
-/*BODY !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! BELOW*/
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 h2{
-    /* text-align: center; */
-    /* margin-top: 2rem; */
-    /* padding: auto; */
+    text-align: center;
+    margin-top: 2rem;
+    padding: auto;
     font-weight: lighter;
 }
-/*.container{
+.container{
     
     width: 100%;
     background: none;
-    /* text-align: center;
-    
-    
-      
-}*/
+    text-align: center;      
+}
 .inline-buttons{
     width: 100%;
-} */
-/* .container button{
-    /* height: 8rem;
+    
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.container button{
+    height: 8rem;
     max-height: 8rem;
     padding: 15px;
     margin: 15px;
-    width: 20%; */
-    
-    /* font-size: 1rem;
+    width: 20%;
+    font-size: 1rem;
     background: #ebeef1;
     border: none;
     border-radius: 25px;
@@ -342,7 +292,8 @@ h2{
     box-shadow: -3px -3px 3px #ffffff,
                 3px 3px 3px #ceced1;
     cursor: pointer;
-} */
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!ABOVE IS ANNOYING ASF!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .container #button:hover:before{
     content:'';
     position: absolute;
@@ -372,18 +323,10 @@ h2{
     border-radius: 25px;
     cursor: pointer;
 }
-/* hr{
-    border: 15px solid #282a2d;
-    border-radius: 25px;
-    box-shadow:  -10px -10px 20px #ffffff,
-                10px 10px 20px #ceced1;
-    width: 80%;
-    display: inline-flex;
-    margin: 8px;
-} */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 #hr-line{
     /* margin-top: 2rem; */
-    /* display: inline-block; */
+    display: inline-block;
     height: 25px;
     width: 84%;
     border-radius: 5px;
@@ -398,7 +341,7 @@ h3{
 }
 
 .projects{
-    /* display: inline-block; */
+    display: inline-block;
     /* margin-top: 2rem; */
     min-height: 30vh;
     width: 85%;
@@ -412,18 +355,20 @@ h3{
     box-shadow: inset 5px 5px 5px rgba(163,177,198,0.9), 
                 inset -5px -5px 5px rgba(255, 255, 255, 1);
 }
-
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .about-me{
     height:100vh;
     background-color: #c3fffb;
 }
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 footer{
     height: 300px;
     background-color: black;
     z-index: 1;
 }
-#contact ul{
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+ul{
     font-size: 40px;
     z-index: 1;
     margin: 5px;
